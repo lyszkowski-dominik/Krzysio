@@ -14,7 +14,7 @@ public class MainFrame extends JFrame{
 
         setJMenuBar(menuConstructor.getMenuBar());
         setTitle("Testowa aplikacja");
-        setSize(600,600);
+        setSize(600,300);
         setLocationRelativeTo(null);
         setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
