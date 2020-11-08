@@ -17,8 +17,8 @@ public class MenuConstructor implements ActionListener {
     public MenuConstructor() {
             this.menuBar = new JMenuBar();
             this.panel = new JPanel();
-            panel.setBorder(BorderFactory.createEmptyBorder(30,30,10,30));
-            panel.setLayout(new GridLayout(0,1));
+            panel.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
+            panel.setLayout(null);
             mFile = new JMenu("Plik");
             mTools = new JMenu("Narzędzia");
             mHelp = new JMenu("Pomoc");
@@ -52,7 +52,6 @@ public class MenuConstructor implements ActionListener {
         if(checker == mIExit)
             System.exit(0);
         else if(checker == mISyrupCalculator){
-            System.out.println("Klikam Cię");
             SyrupCalculator syrupCalculator = new SyrupCalculator(panel);
         }
     }

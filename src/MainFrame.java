@@ -18,7 +18,7 @@ public class MainFrame extends JFrame{
         setLocationRelativeTo(null);
         setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        add(menuConstructor.getPanel(), BorderLayout.CENTER);
+        add(menuConstructor.getPanel());
         setVisible(true);
     }
 
