@@ -13,7 +13,7 @@ public class MainFrame extends JFrame{
         this.menuConstructor = new MenuConstructor();
 
         setJMenuBar(menuConstructor.getMenuBar());
-        setTitle("Testowa aplikacja");
+        setTitle("Projekt Krzyś");
         setSize(600,300);
         setLocationRelativeTo(null);
         setResizable(false);

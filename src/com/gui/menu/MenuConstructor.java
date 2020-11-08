@@ -1,9 +1,9 @@
 package com.gui.menu;
 
+import com.gui.menu.utility.AboutProgram;
 import com.gui.menu.utility.SyrupCalculator;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -17,8 +17,7 @@ public class MenuConstructor implements ActionListener {
     public MenuConstructor() {
             this.menuBar = new JMenuBar();
             this.panel = new JPanel();
-            panel.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
-            panel.setLayout(null);
+
             mFile = new JMenu("Plik");
             mTools = new JMenu("Narzędzia");
             mHelp = new JMenu("Pomoc");
@@ -28,6 +27,7 @@ public class MenuConstructor implements ActionListener {
             mISyrupCalculator = new JMenuItem("Kalkulator syropu");
             mISyrupCalculator.addActionListener(this);
             mIAbout = new JMenuItem("O Programie");
+            mIAbout.addActionListener(this);
 
             menuBar.add(mFile);
             menuBar.add(mTools);
@@ -52,7 +52,11 @@ public class MenuConstructor implements ActionListener {
         if(checker == mIExit)
             System.exit(0);
         else if(checker == mISyrupCalculator){
+            panel.removeAll();
             SyrupCalculator syrupCalculator = new SyrupCalculator(panel);
+        }else if(checker == mIAbout){
+            panel.removeAll();
+            AboutProgram aboutProgram = new AboutProgram(panel);
         }
     }
 }
